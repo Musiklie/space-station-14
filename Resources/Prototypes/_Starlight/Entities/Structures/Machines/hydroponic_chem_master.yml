@@ -1,8 +1,8 @@
 - type: entity
-  id: ChemMaster1k
+  id: ChemMasterBotanical
   parent: [ BaseMachinePowered, ConstructibleMachine ]
-  name: ChemMaster 1000
-  description: An ancient chemical manipulator that was the precursor to the 4000. Careful of leaks.
+  name: Botanical ChemMaster
+  description: A repurposed ChemMaster 1000
   placement:
     mode: SnapgridCenter
   components:
