@@ -9,3 +9,25 @@
   products:
     Hydrogen: 3
     Nitrogen: 1
+
+- type: reaction
+  id: NeutropotassiumBreakdown
+  source: true
+  requiredMixerCategories:
+    - Centrifuge
+  reactants:
+    Neutropotassium:
+      amount: 3
+  products:
+    Radium: 1
+    Potassium: 2
+
+- type: reaction
+  id: HydroUnstableMutagen
+  reactants:
+    Neutropotassium:
+      amount: 1
+    Adaptlis:
+      amount: 1
+  products:
+    UnstableMutagen: 2
