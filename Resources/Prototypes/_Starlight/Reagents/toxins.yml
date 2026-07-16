@@ -45,3 +45,57 @@
   #         reagent: BZMetabolites
   #         min: 0.2
   #       amount: -12
+
+- type: reagent
+  id: Neutropotassium
+  name: reagent-name-neutropotassium
+  group: Toxins
+  desc: reagent-desc-neutropotassium
+  color: "#00FF9D"
+  physicalDesc: reagent-physical-desc-neutropotassium
+  allowedJobs:
+    - Botanist
+  flavor:
+  metabolisms:
+    Poison:
+      effects:
+        - !type:HealthChange
+          damage:
+            types:
+              Radiation: 3
+        - !type:AdjustReagent
+          conditions:
+            - !type:ReagentCondition
+              reagent: Neutropotassium
+              min: 0.51
+            - !type:MetabolizerTypeCondition
+              type: [ Cyclorite ]
+          reagent: Neutropotassium
+          amount: 0.25
+
+- type: reagent
+  id: Adaptlis
+  name: reagent-name-adaptlis
+  group: Toxins
+  desc: reagent-desc-adaptlis
+  color: "#F124FF"
+  physicalDesc: reagent-physical-desc-adaptlis
+  allowedJobs:
+    - Botanist
+  flavor:
+  metabolisms:
+    Poison:
+      effects:
+        - !type:HealthChange
+          damage:
+            types:
+              Cellular: 0.1
+        - !type:AdjustReagent
+          conditions:
+            - !type:ReagentCondition
+              reagent: adaptlis
+              min: 0.51
+            - !type:MetabolizerTypeCondition
+              type: [ Cyclorite ]
+          reagent: Adaptlis
+          amount: 0.25
