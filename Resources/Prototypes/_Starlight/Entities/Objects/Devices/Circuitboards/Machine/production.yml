@@ -1286,6 +1286,21 @@
         defaultPrototype: PowerCellHigh
 
 - type: entity
+  id: IceCreamMakerMachineCircuitBoard
+  parent: BaseMachineCircuitboard
+  name: ice cream maker machine board
+  components:
+    - type: Sprite
+      state: service
+    - type: MachineBoard
+      prototype: IceCreamMaker
+      stackRequirements:
+        Steel: 5
+      tagRequirements:
+        GlassBeaker:
+          amount: 1
+
+- type: entity
   id: ChemApprenticeMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: ChemMaster 1000 machine board
