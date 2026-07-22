@@ -22,3 +22,8 @@
   parent: [ BaseCircuitboardRecipe, BaseMedicalMachineRecipeCategory ]
   id: ChemApprenticeMachineCircuitboard
   result: ChemApprenticeMachineCircuitboard
+
+- type: latheRecipe
+  parent: [ BaseCircuitboardRecipe, BaseServiceMachineRecipeCategory ]
+  id: ChemHydroponicMachineCircuitboard
+  result: ChemHydroponicMachineCircuitboard

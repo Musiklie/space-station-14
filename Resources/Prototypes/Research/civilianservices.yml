@@ -13,6 +13,7 @@
   - SeedExtractorMachineCircuitboard
   - HydroponicsTrayMachineCircuitboard
   - ReagentGrinderIndustrialMachineCircuitboard
+  - ChemHydroponicMachineCircuitboard #SL
   radioChannels:
   - Service
 

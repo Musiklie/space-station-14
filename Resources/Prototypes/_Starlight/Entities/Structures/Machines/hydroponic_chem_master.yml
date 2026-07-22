@@ -2,7 +2,7 @@
   id: ChemMasterBotanical
   parent: [ BaseMachinePowered, ConstructibleMachine ]
   name: Botanical ChemMaster
-  description: A repurposed ChemMaster 1000
+  description: A repurposed ChemMaster 1000, made for use by botanists
   placement:
     mode: SnapgridCenter
   components:
@@ -11,19 +11,19 @@
   - type: Rotatable
     rotateWhileAnchored: true
   - type: Sprite
-    sprite: _Starlight/Structures/Machines/mixer1k.rsi
+    sprite: _Starlight/Structures/Machines/mixer_hydroponic.rsi
     snapCardinals: false 
     layers:
-    - state: mixer1k_empty
-    - state: mixer1k_screens
+    - state: mixerb_empty
+    - state: mixerb_screens
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
   - type: PlumbingConnectorAppearance
     offset: 0.09375
   - type: AtmosPipeColor
   - type: Icon
-    sprite: _Starlight/Structures/Machines/mixer1k.rsi
-    state: mixer1k_empty
+    sprite: _Starlight/Structures/Machines/mixer_hydroponic.rsi
+    state: mixerb_empty
   - type: ItemMapper
     containerWhitelist: [beakerSlot]
     mapLayers:
@@ -32,8 +32,8 @@
           components:
           - FitsInDispenser
   - type: ChemMaster
-    pillDosageLimit: 5
-    patchDosageLimit: 5
+    pillDosageLimit: 1
+    patchDosageLimit: 1
   - type: Physics
     bodyType: Static
   - type: Fixtures
@@ -79,7 +79,7 @@
   # Machine / Construction stuff
   - type: WiresPanel
   - type: Machine
-    board: ChemApprenticeMachineCircuitboard
+    board: ChemHydroponicMachineCircuitboard
   - type: ContainerContainer
     containers:
       beakerSlot: !type:ContainerSlot
@@ -98,8 +98,6 @@
         whitelist:
           tags:
           - Bottle
-          - PillCanister
-          - PatchPack
       pai_slot:
         name: Personal AI Device
         ejectOnInteract: true
@@ -109,7 +107,7 @@
   - type: SolutionContainerManager
     solutions:
       buffer:
-        maxVol: 500 
+        maxVol: 200 
         canReact: false
   - type: DumpableSolution
     solution: buffer
