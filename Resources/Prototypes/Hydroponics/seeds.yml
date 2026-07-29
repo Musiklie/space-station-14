@@ -89,6 +89,7 @@
     - FoodBanana
   mutationPrototypes:
     - mimana
+    - cherenkovbanana #Starlight
   harvestRepeat: Repeat
   lifespan: 50
   maturation: 6
