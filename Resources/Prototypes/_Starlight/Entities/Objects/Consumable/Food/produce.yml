@@ -209,3 +209,79 @@
       heldPrefix: unlit
     - type: Produce
       seedId: cinnaflare
+
+- type: entity
+  name: cherenkovbanana
+  parent: FoodProduceBase
+  id: FoodCherenkovbanana
+  description: A mutated banana, highly radioactive and good at changing your DNA in all the worst ways.
+  components:
+    - type: FlavorProfile
+      flavors:
+        - tingly
+    - type: Edible
+      trash:
+      - TrashCherenkovBananaPeel
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          maxVol: 20
+          reagents:
+            - ReagentId: Neutropotassium
+              Quantity: 2
+            - ReagentId: Potassium
+              Quantity: 4
+    - type: Sprite
+      sprite: _Starlight/Objects/Specific/Hydroponics/cherenkovbanana.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      seedId: cherenkovbanana
+    - type: Extractable
+      juiceSolution:
+        reagents:
+        - ReagentId: JuiceBanana #likely to change to a more unique cherenkov juice in future
+          Quantity: 10
+    - type: Tag
+      tags:
+        - Fruit
+
+- type: entity
+  parent: BaseItem
+  id: TrashCherenkovBananaPeel
+  name: cherenkovbanana peel
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Specific/Hydroponics/cherenkovbanana.rsi
+    state: peel
+  - type: Item
+    sprite: _Starlight/Objects/Specific/Hydroponics/cherenkovbanana.rsi
+    heldPrefix: peel
+  - type: Slippery
+  - type: StepTrigger
+    intersectRatio: 0.2
+  - type: CollisionWake
+    enabled: false
+  - type: Physics
+    bodyType: Dynamic
+  - type: Fixtures
+    fixtures:
+      slips:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        hard: false
+        layer:
+        - SlipLayer
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        density: 30
+        mask:
+        - ItemMask
+  - type: Tag
+    tags:
+    - Recyclable
+    - Trash
+    - BananaPeel

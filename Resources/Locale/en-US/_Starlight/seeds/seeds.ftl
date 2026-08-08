@@ -12,3 +12,5 @@ seeds-cinnamon-name = cinnamon tree
 seeds-cinnamon-display-name = cinnamon tree
 seeds-cinnaflare-name = cinnaflare tree
 seeds-cinnaflare-display-name = cinnaflare tree
+seeds-cherenkovbanana-name = cherenkovbanana tree
+seeds-cherenkovbanana-display-name = cherenkovbanana tree

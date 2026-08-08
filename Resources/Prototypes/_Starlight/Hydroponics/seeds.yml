@@ -169,15 +169,15 @@
   name: seeds-cherenkovbanana-name
   noun: seeds-noun-seeds
   displayName: seeds-cherenkovbanana-display-name
-  plantRsi: Objects/Specific/Hydroponics/banana.rsi
-  packetPrototype: BananaSeeds
+  plantRsi: _Starlight/Objects/Specific/Hydroponics/cherenkovbanana.rsi
+  packetPrototype: CherenkovbananaSeeds
   productPrototypes:
-    - FoodBanana
+    - FoodCherenkovbanana
   harvestRepeat: Repeat
   lifespan: 50
   maturation: 6
   production: 6
-  yield: 2
+  yield: 4
   idealLight: 9
   waterConsumption: 0.60
   idealHeat: 298
